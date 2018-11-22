@@ -1,0 +1,18 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Ajouter un nouvel utilisateur"></Label>
+</ActionBar>
+
+<GridLayout class="page">
+    <StackLayout class="input-field">
+        <StackLayout class="input" orientation="horizontal">
+            <Label class="h3 p-15" text="Prenom" textWrap="true"></Label>
+            <TextField  hint="saisir le texte" [(ngModel)]="user.prenom" autocorrect="false" class="input input-border"></TextField>
+        </StackLayout>
+        <StackLayout class="input" orientation="horizontal">
+            <Label class="h3 p-15" text="Nom" textWrap="true"></Label>
+            <TextField  hint="saisir le texte"  [(ngModel)]="user.nom" autocorrect="false" class="input input-border"></TextField>
+        </StackLayout>
+        <Button text="Ajouter" (tap)="submit()" class="btn btn-primary btn-active"></Button>
+        <Button text="Voir la liste" (tap)="goListe()" class="btn btn-primary btn-active"></Button>
+    </StackLayout>
+</GridLayout>

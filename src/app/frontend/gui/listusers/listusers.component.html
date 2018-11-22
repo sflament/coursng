@@ -1,0 +1,20 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="liste des utilisateurs"></Label>
+</ActionBar>
+
+<StackLayout class="page">
+    <StackLayout class="page">
+        <ListView [items]="myListe"  class="list-group">
+            <ng-template let-myItem="item" let-i="index" let-odd="odd" let-even="even">
+                <StackLayout orientation="horizontal" >
+                    <Label [text]="myItem.prenom"></Label>
+                    <Label text=" : "></Label>
+                    <Label [text]="myItem.nom"></Label>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    </StackLayout>
+    <StackLayout class="input-field">
+        <Button text="Ajouter un utilisateur" (tap)="addUser()" class="btn btn-primary btn-active"></Button>
+    </StackLayout>
+</StackLayout>
